@@ -5,8 +5,8 @@ Source code for KDD 2021 paper: "Structure-aware Interactive Graph Neural Networ
   <br />
   <br />
 </p> 
-### Dependencies
 
+### Dependencies
 - python >= 3.8
 - paddlepaddle >= 2.1.0
 - pgl >= 2.1.4
