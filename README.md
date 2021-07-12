@@ -1,12 +1,10 @@
 ## SIGN-Paddle
-
 Source code for KDD 2021 paper: "Structure-aware Interactive Graph Neural Networks for the Prediction of Protein-Ligand Binding Affinity".
 <p align="center">
   <img src="sign.png" width="1000">
   <br />
   <br />
 </p> 
-
 ### Dependencies
 
 - python >= 3.8
@@ -18,7 +16,6 @@ Source code for KDD 2021 paper: "Structure-aware Interactive Graph Neural Networ
 The PDBbind dataset can be downloaded [here](http://pdbbind-cn.org).
 The CSAR-HiQ dataset can be downloaded [here](http://www.csardock.org).
 You may need to use the [UCSF Chimera tool](https://www.cgl.ucsf.edu/chimera/) to convert the PDB-format files into MOL2-format files for feature extraction at first.
-
 Alternatively, we also provided a [dropbox link](https://www.dropbox.com/sh/2uih3c6fq37qfli/AAD-LHXSWMLAuGWzcQLk5WI3a) for downloading PDBbind and CSAR-HiQ datasets.
 
 The downloaded dataset should be preprocessed to obtain features and spatial coordinates:
