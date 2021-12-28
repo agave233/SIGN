@@ -76,8 +76,8 @@ def gen_feature(path, name, featurizer):
     for i, atom in enumerate(pocket):
         if atom.atomicnum > 1:
             pock_atoms.append(atom.atomicnum)
-    for x in pock_atoms[node_num:]:
-        assert x == 8
+    # for x in pock_atoms[node_num:]:
+    #     assert x == 8
     pock_atoms = pock_atoms[:node_num]
     assert len(lig_atoms)==len(ligand_features) and len(pock_atoms)==len(pocket_features)
     
@@ -277,7 +277,7 @@ def cons_lig_pock_graph_with_spatial_context(ligand, pocket, add_fea=2, theta=5,
     if len(pock_fea) > 0:
         assert size==max(node_map.values())+1
     assert feas.shape[0]==coords.shape[0]
-    return lig_size, coords, feas, atoms
+    return lig_size, coords, feas, atoms_raw
 
 def random_split(dataset_size, split_ratio=0.9, seed=0, shuffle=True):
     """random splitter"""
@@ -315,8 +315,8 @@ def process_dataset(core_path, refined_path, dataset_name, output_path, cutoff):
         v['pk'] = pk_dict[k]
         data_dict[k] = v
 
-    refined_id, refined_data, refined_pk = [], [], [], []
-    core_id, core_data, core_pk = [], [], [], []
+    refined_id, refined_data, refined_pk = [], [], []
+    core_id, core_data, core_pk = [], [], []
 
     for k, v in tqdm(data_dict.items()):
         ligand = (v['lig_fea'], v['lig_co'], v['lig_atoms'], v['lig_eg'])
